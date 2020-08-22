@@ -1,10 +1,7 @@
 package com.azat.newsappmvvm.db
 
 import androidx.lifecycle.LiveData
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.azat.newsappmvvm.model.Article
 
 /*************************
@@ -14,13 +11,14 @@ import com.azat.newsappmvvm.model.Article
  *                       *
  * 22/08/2020 - 7:00 PM  *
  ************************/
+@Dao
 interface ArticleDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(article: Article): Long
+    suspend fun insertArticle(article: Article): Long
 
     @Query("SELECT * FROM articles")
-    fun getAllArticles(): LiveData<List<Article>>
+    fun getSavedArticles(): LiveData<List<Article>>
 
     @Delete
     suspend fun deleteArticle(article: Article)
