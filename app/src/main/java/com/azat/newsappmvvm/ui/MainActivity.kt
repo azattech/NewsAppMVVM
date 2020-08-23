@@ -1,13 +1,13 @@
-package com.azat.newsappmvvm
+package com.azat.newsappmvvm.ui
 
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.azat.newsappmvvm.R
 import com.azat.newsappmvvm.db.ArticleDao
 import com.azat.newsappmvvm.network.NewsApi
-import com.azat.newsappmvvm.ui.NewsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
