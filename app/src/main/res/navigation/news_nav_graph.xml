@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/breakingNewsFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/breakingNewsFragment"
+        android:name="com.azat.newsappmvvm.ui.fragments.BreakingNewsFragment"
+        android:label="BreakingNewsFragment">
+        <action
+            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
+            app:destination="@id/detailNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.azat.newsappmvvm.ui.fragments.SavedNewsFragment"
+        android:label="SavedNewsFragment">
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            app:destination="@id/detailNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchNewsFragment"
+        android:name="com.azat.newsappmvvm.ui.fragments.SearchNewsFragment"
+        android:label="SearchNewsFragment">
+        <action
+            android:id="@+id/action_searchNewsFragment_to_articleFragment"
+            app:destination="@id/detailNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNewsFragment"
+        android:name="com.azat.newsappmvvm.ui.fragments.DetailNewsFragment"
+        android:label="DetailNewsFragment" />
+</navigation>

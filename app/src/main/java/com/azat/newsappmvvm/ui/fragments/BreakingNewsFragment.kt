@@ -25,6 +25,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
         super.onViewCreated(view, savedInstanceState)
 
         setUpRecyclerView()
+        viewModel.getBreakingNews()
 
         viewModel.newsLiveData.observe(viewLifecycleOwner, Observer {
             newsAdapter.differ.submitList(it)
