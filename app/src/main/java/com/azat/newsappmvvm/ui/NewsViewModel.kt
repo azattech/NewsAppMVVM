@@ -25,6 +25,8 @@ class NewsViewModel @ViewModelInject constructor(
     val newsLiveData = MutableLiveData<MutableList<Article>>()
     val searchNewsLiveData = MutableLiveData<MutableList<Article>>()
 
+    val loadingLiveData = MutableLiveData<Boolean>()
+
     fun getBreakingNews() = viewModelScope.launch {
         val breakingNews = remoteRepository.getBreakingNews()
         newsLiveData.postValue(breakingNews)
