@@ -11,7 +11,7 @@
         android:name="com.azat.newsappmvvm.ui.fragments.BreakingNewsFragment"
         android:label="BreakingNewsFragment">
         <action
-            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
+            android:id="@+id/action_breakingNewsFragment_to_detailFragment"
             app:destination="@id/detailNewsFragment" />
     </fragment>
     <fragment
@@ -19,7 +19,7 @@
         android:name="com.azat.newsappmvvm.ui.fragments.SavedNewsFragment"
         android:label="SavedNewsFragment">
         <action
-            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            android:id="@+id/action_savedNewsFragment_to_detailFragment"
             app:destination="@id/detailNewsFragment" />
     </fragment>
     <fragment
@@ -27,11 +27,15 @@
         android:name="com.azat.newsappmvvm.ui.fragments.SearchNewsFragment"
         android:label="SearchNewsFragment">
         <action
-            android:id="@+id/action_searchNewsFragment_to_articleFragment"
+            android:id="@+id/action_searchNewsFragment_to_detailFragment"
             app:destination="@id/detailNewsFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailNewsFragment"
         android:name="com.azat.newsappmvvm.ui.fragments.DetailNewsFragment"
-        android:label="DetailNewsFragment" />
+        android:label="DetailNewsFragment">
+        <argument
+            android:name="article"
+            app:argType="com.azat.newsappmvvm.model.Article" />
+    </fragment>
 </navigation>
