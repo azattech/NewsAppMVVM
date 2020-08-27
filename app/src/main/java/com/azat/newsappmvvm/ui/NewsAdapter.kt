@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.azat.newsappmvvm.R
 import com.azat.newsappmvvm.model.Article
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.item_news.view.*
+import kotlinx.android.synthetic.main.item_row_news.view.*
 
 /*************************
  * Created by AZAT SAYAN *
@@ -35,7 +35,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         NewsViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_news,
+                R.layout.item_row_news,
                 parent,
                 false
             )
@@ -47,11 +47,10 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         val article = differ.currentList[position]
         holder.itemView.apply {
             article?.let {
-                Glide.with(this).load(it.urlToImage).into(ivArticleImage)
-                tvSource.text = it.source?.name
-                tvTitle.text = it.title
-                tvDescription.text = it.description
-                tvPublishedAt.text = it.publishedAt
+                Glide.with(this).load(it.urlToImage).into(ivNewsImage)
+                tvNewsSource.text = it.source?.name
+                tvNewsTitle.text = it.title
+                tvNewsDate.text = it.publishedAt
 
                 setOnClickListener {
                     onItemClickListener?.let {
