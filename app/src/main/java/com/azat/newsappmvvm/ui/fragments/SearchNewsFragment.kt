@@ -45,10 +45,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
                 bundle
             )
         }
-
-
     }
-
 
     private fun setupRecyclerView() {
         newsAdapter = NewsAdapter()

@@ -3,7 +3,7 @@ package com.azat.newsappmvvm.di
 import android.content.Context
 import androidx.room.Room
 import com.azat.newsappmvvm.db.ArticleDatabase
-import com.azat.newsappmvvm.util.Constant.Companion.ARTICLE_DATABASE_NAME
+import com.azat.newsappmvvm.util.Constant.Companion.NEWS_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,9 +29,8 @@ object DatabaseModule {
     ) = Room.databaseBuilder(
         app,
         ArticleDatabase::class.java,
-        ARTICLE_DATABASE_NAME
-    )
-        .build()
+        NEWS_DATABASE_NAME
+    ).build()
 
     @Singleton
     @Provides

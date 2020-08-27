@@ -12,7 +12,7 @@ import javax.inject.Inject
  * 23/08/2020 - 11:51 AM  *
  ************************/
 class RemoteRepository @Inject constructor(
-    val newsApi: NewsApi
+    private val newsApi: NewsApi
 ) : BaseRepository() {
 
     suspend fun getBreakingNews(): MutableList<Article>? {

@@ -18,8 +18,8 @@ import kotlinx.coroutines.launch
  * 23/08/2020 - 10:28 AM  *
  ************************/
 class NewsViewModel @ViewModelInject constructor(
-    val remoteRepository: RemoteRepository,
-    val localeRepository: LocaleRepository
+    private val remoteRepository: RemoteRepository,
+    private val localeRepository: LocaleRepository
 ) : ViewModel() {
 
     val newsLiveData = MutableLiveData<MutableList<Article>>()

@@ -44,10 +44,4 @@ object NetworkModule {
             .build()
             .create(NewsApi::class.java)
     }
-
-    /* @Singleton
-     @Provides
-     fun provideNewsApiService(newsApi: NewsApi): NewsApiService {
-         return NewsApiService(newsApi)
-     }*/
 }
