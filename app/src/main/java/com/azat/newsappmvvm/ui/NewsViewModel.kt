@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.azat.newsappmvvm.model.Article
 import com.azat.newsappmvvm.repository.LocaleRepository
-
 import com.azat.newsappmvvm.repository.RemoteRepository
 import kotlinx.coroutines.launch
 
@@ -29,7 +28,7 @@ class NewsViewModel @ViewModelInject constructor(
         getBreakingNews()
     }
 
-    private fun getBreakingNews() = viewModelScope.launch {
+    fun getBreakingNews() = viewModelScope.launch {
         val breakingNews = remoteRepository.getBreakingNews()
         newsLiveData.postValue(breakingNews)
     }

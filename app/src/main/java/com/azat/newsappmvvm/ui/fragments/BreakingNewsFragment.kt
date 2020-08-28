@@ -3,6 +3,7 @@ package com.azat.newsappmvvm.ui.fragments
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -36,6 +37,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
                 bundle
             )
         }
+        refreshNews()
     }
 
     private fun observeLiveData() {
@@ -51,6 +53,14 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
         rvBreakingNews.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
+        }
+    }
+
+    private fun refreshNews() {
+        refreshLayout.setOnRefreshListener {
+            viewModel.getBreakingNews()
+            Toast.makeText(activity, "Updated", Toast.LENGTH_SHORT).show()
+            refreshLayout.isRefreshing = false
         }
     }
 }
