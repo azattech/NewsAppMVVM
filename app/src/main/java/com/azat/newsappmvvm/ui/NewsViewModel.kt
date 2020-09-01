@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
  *                       *
  * Contact: @theazat     *
  *                       *
- * 23/08/2020 - 10:28 AM  *
+ * 23/08/2020 - 10:28 AM *
  ************************/
 class NewsViewModel @ViewModelInject constructor(
     private val remoteRepository: RemoteRepository,

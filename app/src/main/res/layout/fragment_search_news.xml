@@ -10,18 +10,24 @@
         android:id="@+id/etSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search..."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:background="@drawable/black_background"
+        android:ems="10"
+        android:fontFamily="@font/g_bold"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="50dp"
+        android:paddingTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etSearch"
         tools:layout_editor_absoluteX="0dp" />
