@@ -1,6 +1,9 @@
 # NewsAppMVVM
 NewsApp is a sample news app built using Modern Android Development (Architecture Components, MVVM, Kotlin, Coroutines, Retrofit, Room, Dagger-Hilt)
 
+![GIF-200912_105244](https://user-images.githubusercontent.com/24530306/92990814-19c2ac80-f4e8-11ea-8301-be343b3fc18d.gif)
+
+
 This is a simple news app 🗞️ which uses [NewsAPI](https://newsapi.org/) to fetch top news headlines from the API. This app also includes Room DB you can add a news or delete it from locale storage.
 
 ## Built With 🛠
