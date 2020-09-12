@@ -27,7 +27,7 @@ You'll need to provide API key to fetch the news from the [NewsAPI](https://news
 ## License
 
 ```xml
-Designed and developed by 2020 thazat (Azat Sayan)
+Designed and developed by 2020 theazat (Azat Sayan)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
