@@ -16,9 +16,8 @@ import org.mockito.junit.MockitoJUnitRunner
  *                       *
  * Contact: @theazat     *
  *                       *
- * 26/12/2020 - 11:56 AM  *
+ * 26/12/2020 - 12:48 PM  *
  ************************/
-
 @RunWith(MockitoJUnitRunner::class)
 class LocaleRepositoryTest {
 
